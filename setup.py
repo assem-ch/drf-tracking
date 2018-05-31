@@ -73,6 +73,7 @@ setup(
     author=author,
     author_email=author_email,
     packages=get_packages(package),
+    zip_safe=False,
     package_data=get_package_data(package),
     install_requires=[
         'Django>=1.7',

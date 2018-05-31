@@ -79,7 +79,7 @@ class BaseLoggingMixin(object):
                     connection.set_rollback(True)
                     connection.set_rollback(False)
                     self.handle_log()
-            except Exception as e:
+            except Exception:
                 # ensure that all exceptions raised by handle_log
                 # doesn't prevent API call to continue as expected
                 logger.exception('Logging API call raise exception!')
